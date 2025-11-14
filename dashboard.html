@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard • Crypto Swap</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-card">
+    <img id="avatar" class="avatar" />
+    <h2 id="username"></h2>
+    <button onclick="location.href='swap.html'" class="primary-btn">Start New Swap</button>
+  </div>
 
+<script>
+fetch("https://api.josh.cat/me", { credentials: "include" })
+  .then(r => r.json())
+  .then(user => {
+    document.getElementById("avatar").src = user.avatar;
+    document.getElementById("username").innerText = user.tag;
+  });
+</script>
+</body>
+</html>
