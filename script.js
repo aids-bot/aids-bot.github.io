@@ -1,4 +1,4 @@
-const API = "const API = "http://localhost:3000";";
+const API = "const API = "http://localhost:3000";
 
 const fromCoin = document.getElementById("fromCoin");
 const toCoin = document.getElementById("toCoin");
